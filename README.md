@@ -1,56 +1,27 @@
-# **Finding Lane Lines on the Road** 
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+# **Finding Lane Lines on the Road**
+This is my first project in the Udacity Nanodegree program [Self-Driving Car Engineer](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013), and also my first project using Git and GitHub together!
 
-<img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
+The original [readme.md](https://github.com/udacity/CarND-LaneLines-P1) is a manual for students; I change it to a documentation of how I got the set-up going.
 
-Overview
----
+## Prio to the project
+Prio to this project, I took two Udacity free courses [Version Control with Git](https://www.udacity.com/course/version-control-with-git--ud123) and [Writing readmes](https://www.udacity.com/course/writing-readmes--ud777), which were very helpful to me to get to know Git. However, they did not teach students how Git and GitHub work together. I used the search engine to teach myself.
 
-When we drive, we use our eyes to decide where to go.  The lines on the road that show us where the lanes are act as our constant reference for where to steer the vehicle.  Naturally, one of the first things we would like to do in developing a self-driving car is to automatically detect lane lines using an algorithm.
+For this project, I did the following set-ups:
+* Using `git clone <repository URL>` to get the repo from Udacity GitHub
+* On my GitHub, creating a new repo with no initializing, and copying the URL
+* Using `git remote set-url origin <repository URL>` to change the origin to my GitHub repo
+* Using `git push -u origin master` to upload the repo to my GitHub
 
-In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
-
-To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md 
-
-To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
-
-
-Creating a Great Writeup
----
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
-
-1. Describe the pipeline
-
-2. Identify any shortcomings
-
-3. Suggest possible improvements
-
-We encourage using images in your writeup to demonstrate how your pipeline works.  
-
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
+*Note: During the course I used Atom, which I find perfect to write readme.md, because I can edit the Markdown text while seeing the preview!*
 
 
-The Project
----
+## Starter-Kit
+Udacity provides a [starter-kit](https://github.com/udacity/CarND-LaneLines-P1) to students for a unified environment. When I was following the instructions, I got a problem creating the environment using `conda env create -f environment.yml`. It took a dozen minutes only ending up with no environment (which you can see by trying to activate the environment `source activate carnd-term1`). Thanks to a [question](https://knowledge.udacity.com/questions/55633) in the Udacity Knowledge, I could solve this by putting all entries of "dependencies" under "-pip:" in the environment.yml in the starter-kit folder (see below; additionally, I removed all versions in this .yml as suggested by the answers).
 
-## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
+![Screenshot of my environment.yml](https://github.com/dingchen-github/DetectLaneLines/blob/master/yml.png)
 
-**Step 1:** Set up the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) if you haven't already.
+## Jupyter notebook
 
-**Step 2:** Open the code in a Jupyter Notebook
+`jupyter notebook`
 
-You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out [Udacity's free course on Anaconda and Jupyter Notebooks](https://classroom.udacity.com/courses/ud1111) to get started.
-
-Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
-
-`> jupyter notebook`
-
-A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
-
-**Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
-
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
-
+*Note: The Udacity tutors have made 92 commits. The commits from 93 are from me :)*
