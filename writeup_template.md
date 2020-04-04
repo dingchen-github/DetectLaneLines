@@ -5,10 +5,9 @@ The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images_output/solidWhiteCurve.jpg "solidWhiteCurve"
+[image2]: ./test_images_output/solidWhiteRight.mp4.png "solidWhiteRight.mp4"
+[image3]: ./test_images_output/solidYellowLeft.mp4.png "solidYellowLeft.mp4"
 
 ---
 
@@ -27,23 +26,35 @@ My pipeline consisted of the following steps.
 8. Combine the line images with the original images.
 9. Write the images to files.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function with the following thoughts.
+1. Separate the lines to left and right ones.
+2. Find the longest line segment among the left or right lines.
+3. Extrapolate this longest line segment to the top and bottom of the region of interest.
 
-If you'd like to include images to show how the pipeline works, here is how to include an image:
+From the output test images I can see, this function works well, for example:
+Note: Since I used `cv2.imshow`, the color [255, 0, 0] in drawing_lines is blue.
 
-![alt text][image1]
+![solidWhiteCurve][image1]
 
+In the videos, this function delivers also good results, from each frame point of view.
+
+Screenshot from solidWhiteRight.mp4:
+
+![solidWhiteRight.mp4][image2]
+
+Screenshot from solidYellowLeft.mp4:
+
+![solidYellowLeft.mp4][image3]
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+1. The region of interest is predefined in the code. Although I referred to the image shape, not absolute values, but this region would only work for this kind of images and videos. For a certain car model, the lane cameras would deliver the same kind of images and videos, so this code could work, but possibly not for another car model.
 
-One potential shortcoming would be what would happen when ...
-
-Another shortcoming could be ...
+2. When I play the videos (solidWhiteRight.mp4, solidYellowLeft.mp4), I can see the lines are not stable as in P1_example.mp4. They jump back and forth within small distances. I am not sure if this will have impact on other autonomous driving functions, which depend on the identified lanes.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+1. A possible solution would be to calibrate the region of interest for each car model.
 
-Another potential improvement could be to ...
+2. A potential improvement could be to use the longest two or three line segments to calculate their average position and slope, instead of only one line segment.
