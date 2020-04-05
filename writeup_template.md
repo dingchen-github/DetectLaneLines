@@ -32,6 +32,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 3. Extrapolate this longest line segment to the top and bottom of the region of interest.
 
 From the output test images I can see, this function works well, for example:
+
 Note: Since I used `cv2.imshow`, the color [255, 0, 0] in drawing_lines is blue.
 
 ![solidWhiteCurve][image1]
