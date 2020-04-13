@@ -1,4 +1,4 @@
-# **Finding Lane Lines on the Road**
+# **Detect Lane Lines on the Road**
 This is my first project in the Udacity Nanodegree program [Self-Driving Car Engineer](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013), and also my first project using Git and GitHub together!
 
 The original [readme.md](https://github.com/udacity/CarND-LaneLines-P1) is a manual for students; I change it to a documentation of how I got the set-ups going. If any student would have difficulties gettig started, and happend to find my readme.md, I hope she or he could find my experience useful.
